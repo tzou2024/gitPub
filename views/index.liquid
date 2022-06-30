@@ -30,5 +30,19 @@
         -->
         <h1>Welcome to gitPub</h1>
 
+
+        <ul>
+            {% for drink in drinks%}
+                <li>
+                    {% assign words = drink.name | split: ' ' %}
+
+                    {% capture titlecase %}
+                    {% for word in words %}
+                        {{ word | capitalize }}
+                    {% endfor %}{% endcapture %}
+                    {{ titlecase }}
+                </li>
+            {% endfor %}
+        </ul>
         </body>
     </html> 
