@@ -15,7 +15,9 @@ const fruits = require('./models/fruits.js')
 
 //home route
 app.get('/', (req,res) =>{
-    res.send(`<h1>Welcome to Gitpub App!`)
+    res.send(`<body style="background-color: steelblue">
+            <h1>Welcome to Gitpub App! </h1>
+            <a href="/drinks">view drinks</a>`)
 })
 
 //index route
@@ -25,7 +27,7 @@ app.get('/drinks', (req,res) =>{
 
 //show route
 app.get('/drinks/:drinkIndex', (req,res) =>{
-    console.log(req.params.drinkIndex)
+    //console.log(req.params.drinkIndex)
     res.render('show', {drink: drinks[req.params.drinkIndex]
                         })
 })
