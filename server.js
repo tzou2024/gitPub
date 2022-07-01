@@ -26,6 +26,8 @@ app.get('/drinks', (req,res) =>{
 //show route
 app.get('/drinks/:drinkIndex', (req,res) =>{
     console.log(req.params.drinkIndex)
+    res.render('show', {drink: drinks[req.params.drinkIndex]
+                        })
 })
 
 app.listen(port, () =>{
