@@ -40,7 +40,7 @@
                     {% for word in words %}
                         {{ word | capitalize }}
                     {% endfor %}{% endcapture %}
-                    {{ titlecase }}
+                    <a href="/drinks/{{forloop.index0}}">{{ titlecase }}
                 </li>
             {% endfor %}
         </ul>
