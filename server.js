@@ -12,12 +12,20 @@ app.get('/', (req,res) =>{
 
 const fruits = require('./models/fruits.js')
 */
+
+//home route
 app.get('/', (req,res) =>{
     res.send(`<h1>Welcome to Gitpub App!`)
 })
 
+//index route
 app.get('/drinks', (req,res) =>{
     res.render('index', {drinks: drinks})
+})
+
+//show route
+app.get('/drinks/:drinkIndex', (req,res) =>{
+    console.log(req.params.drinkIndex)
 })
 
 app.listen(port, () =>{
